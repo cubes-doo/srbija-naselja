@@ -11,12 +11,13 @@ class ServiceProvider extends BaseServiceProvider
      *
      * @var bool
      */
-    protected $defer = true;
+    //protected $defer = true;
 
 
     public function register()
     {
         $this->app->singleton(SrbijaNaseljaService::class, function ($app) {
+            
             $service = SrbijaNaseljaService::getInstance();
             if ($app->getLocale() == 'sr') {
                 $service->setDefaultLang('sr_RS');
@@ -25,7 +26,7 @@ class ServiceProvider extends BaseServiceProvider
             return $service;
         });
 
-        $this->app->alias('srbijaNaselja', SrbijaNaseljaService::class);
+        $this->app->alias(SrbijaNaseljaService::class, 'SrbijaNaselja');
     }
 
     /**

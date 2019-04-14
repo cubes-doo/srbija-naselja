@@ -172,6 +172,3 @@ Testovi se pokrecu pomocu komande
 ```
 ./vendor/bin/phpunit --bootstrap vendor/autoload.php tests
 ```
-
-Naravno pre toga morate instalirati neophodne biblioteke.
-

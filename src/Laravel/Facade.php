@@ -1,8 +1,8 @@
 <?php
 
-namespace Intervention\Image\Facades;
+namespace CubesDoo\SrbijaNaselja\Laravel;
 
-use Illuminate\Support\Facades\Facade;
+use Illuminate\Support\Facades\Facade as BaseFacade;
 
 /**
  * @method mixed lang(string $lang)
@@ -13,10 +13,10 @@ use Illuminate\Support\Facades\Facade;
  * @method string[] okruzi()
  * @method string okrug($postanskiBroj)
  */
-class SrbijaNaselja extends Facade
+class Facade extends BaseFacade
 {
     protected static function getFacadeAccessor()
     {
-        return 'srbijaNaselja';
+        return 'SrbijaNaselja';
     }
 }
