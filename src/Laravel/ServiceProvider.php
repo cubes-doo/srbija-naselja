@@ -19,10 +19,7 @@ class ServiceProvider extends BaseServiceProvider
         $this->app->singleton(SrbijaNaseljaService::class, function ($app) {
             
             $service = SrbijaNaseljaService::getInstance();
-            if ($app->getLocale() == 'sr') {
-                $service->setDefaultLang('sr_RS');
-            }
-
+            
             return $service;
         });
 
